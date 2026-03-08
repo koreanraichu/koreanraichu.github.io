@@ -5,15 +5,17 @@
     font-display: swap;
 }
 
+/*컬러테이블: Viridian파란색*/
 :root {
-    --main-color: #937cc1;
-    --sub-color: #40826d;
-    --main-dark: #5F4B8B;
-    --sub-dark:#364b44;
-    --main-light: #eeecf3;
-    --sub-light: #eff5f0;
-    --accent: #3A6EA5;
+    --main-color: #40826d;  
+    --sub-color: #44617F;   
+    --main-dark: #10503B;   
+    --sub-dark: #14314F;    
+    --main-light: #97BFB2;  
+    --sub-light: #98A9BC;   
+    --accent: #C9A84C;      
     --white: #F6f6f6;
+    --light: #f1f1f1;
     --black: #2D2D2D;
     --gray: #c7c7c7;
     --gray2: #8a8a8a;
@@ -22,25 +24,34 @@
 html,
 body {
     font-family: 'NanumSquareRound';
-    font-size: 14pt;
+    font-size: 13pt;
     letter-spacing: -0.01em;
+    scrollbar-width: none; /* 착한 사람만 보이는 스크롤바 아닙니다. */
 }
 
 body {
-    background-color: var(--main-light);
+    background-color: var(--light);
     color: var(--black);
-    line-height: 1.1em;
+    line-height: 1.2em;
     margin: 0;
     padding: 0;
 }
+/* 본론 */
 
 p {
-    margin: 5px;
+    margin: 6px;
 }
 
+/*p태그인데 부연설명에 들어갑니다*/
 .explain {
     font-size: 0.8em;
     color: var(--gray2);
+}
+
+/* 그 그 이름 밑에*/
+.info {
+    color: var(--main-dark);
+    font-size: 1.1em;
 }
 
 h2,
@@ -50,7 +61,9 @@ h4 {
 }
 
 blockquote {
-    color: var(--sub-dark);
+    color: var(--sub-color);
+    margin: 0 5px;
+    padding: 5px;
 }
 
 ul {
@@ -65,7 +78,7 @@ li::before {
     /* 7 버전 폰트 패밀리 확인 (보통 'Font Awesome 7 Free' 또는 'Font Awesome 7 Brands') */
     font-family: "Font Awesome 7 Free"; 
     font-weight: 900; 
-    color: var(--sub-color);
+    color: var(--main-color);
     margin: 0 10px;
 }
 
@@ -80,7 +93,10 @@ li::before {
     height: 150px;
     padding: 5px;
     font-family: inherit;
+    margin: 15px 0;
 }
+
+
 
 .tab {
     width: 100%;
@@ -95,24 +111,24 @@ li::before {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 35px;
+    height: 38px;
 }
 
 .btn {
     width: 110px;
-    height: 35px;
+    height: 38px;
     font-family: inherit;
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
 
 .btn.focus {
-    background-color: var(--main-color);
+    background-color: var(--main-dark);
     color: var(--white);
 }
 
 .btn>a {
-    line-height: 2em;
+    line-height: 2.2em;
 }
 
 .btn.focus>a {
@@ -131,6 +147,7 @@ li::before {
 
 .link i {
     transition: transform 0.2s ease, color 0.2s ease;
+    color: var(--sub-color);
 }
 
 .main {
@@ -138,13 +155,13 @@ li::before {
     height: auto;
     padding: 5px;
     font-family: inherit;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 i {
     color: var(--main-dark);
-    font-size: 1.5em;
-    margin: 0 10px;
+    font-size: 1.7em;
+    margin: 0 7px;
 }
 
 a {
@@ -153,8 +170,8 @@ a {
 }
 
 .line {
-    height: 2px;
-    background-color: var(--main-color);
+    height: 3px;
+    background-color: var(--main-dark);
 }
 
 .main .content .cont {
@@ -168,23 +185,54 @@ a {
 
 /* 개별 오브젝트를 감싸는 카드*/
 .card {
-    width: 95%;
-    border: 1px solid var(--sub-dark);
+    max-width: 100%;
+    border: 1px solid var(--gray);
     border-radius: 10px;
-    margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     background-color: var(--white);
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     transition: all 0.2s ease;
 }
 
+.card i {
+    font-size: 1.1em;
+}
+
+.card p {
+    margin: 15px 0;
+}
+
+.card h2, h3 {
+    margin: 15px 0;
+}
+
+.card h4 {
+    margin: 5px 15px;
+    color: var(--sub-dark);
+}
+
+.card h4 i {
+    font-size: 0.8em;
+    color: var(--sub-dark);
+}
+
+.card_sub {
+    margin: 12px 0;
+}
+
 #tab1 {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 12px;
 }
 
 .about>p {
     margin: 10px 5px;
     font-size: 0.95em;
+}
+
+#about1, #about2 {
+    display: grid;
+    gap: 25px;
 }
 
 #about1>p>i {
@@ -199,6 +247,10 @@ a {
     font-size: 0.95em;
 }
 
+.pub-title {
+    color: var(--sub-color);
+}
+
 #tab2 {
     grid-template-columns: 1fr;
 }
@@ -206,15 +258,20 @@ a {
 #skill_card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    gap: 25px;
 }
 
 /*아코디언 패널*/
 .accordion {
-    background-color: var(--main-dark);
-    color: var(--main-light);
+    background-color: var(--main-color);
+    color: var(--light);
     padding: 8px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.12);
+}
+
+.accordion i {
+    color: var(--light);
 }
 
 .accordion.active{
@@ -222,15 +279,16 @@ a {
 }
 
 .panel {
-    background-color: var(--sub-light);
+    background-color: var(--white);
     color: var(--black);
     padding: 12px;
     display: none;
     transition: all 0.6s ease-in-out;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.12);
 }
 
 .panel > h3 {
-    color: var(--sub-dark);
+    color: var(--sub-color);
 }
 
 .icon-toggle {
@@ -302,6 +360,7 @@ a {
 @media (hover: hover) {
     .card:hover {
         box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        border: 1px solid var(--accent);
         transform: translateY(-2px);
     }
 
