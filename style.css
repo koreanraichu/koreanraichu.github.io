@@ -7,13 +7,13 @@
 
 /*컬러테이블: Viridian파란색*/
 :root {
-    --main-color: #40826d;  
-    --sub-color: #44617F;   
-    --main-dark: #10503B;   
-    --sub-dark: #14314F;    
-    --main-light: #97BFB2;  
-    --sub-light: #98A9BC;   
-    --accent: #C9A84C;      
+    --main-color: #40826d;
+    --sub-color: #44617F;
+    --main-dark: #10503B;
+    --sub-dark: #14314F;
+    --main-light: #97BFB2;
+    --sub-light: #98A9BC;
+    --accent: #C9A84C;
     --white: #F6f6f6;
     --light: #f1f1f1;
     --black: #2D2D2D;
@@ -26,7 +26,8 @@ body {
     font-family: 'NanumSquareRound';
     font-size: 13pt;
     letter-spacing: -0.01em;
-    scrollbar-width: none; /* 착한 사람만 보이는 스크롤바 아닙니다. */
+    scrollbar-width: none;
+    /* 착한 사람만 보이는 스크롤바 아닙니다. */
 }
 
 body {
@@ -36,6 +37,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* 본론 */
 
 p {
@@ -73,11 +75,11 @@ ul {
 }
 
 li::before {
-    content: "\f00c"; 
-    
+    content: "\f00c";
+
     /* 7 버전 폰트 패밀리 확인 (보통 'Font Awesome 7 Free' 또는 'Font Awesome 7 Brands') */
-    font-family: "Font Awesome 7 Free"; 
-    font-weight: 900; 
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
     color: var(--main-color);
     margin: 0 10px;
 }
@@ -190,7 +192,7 @@ a {
     border-radius: 10px;
     padding: 12px;
     background-color: var(--white);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease;
 }
 
@@ -202,7 +204,8 @@ a {
     margin: 15px 0;
 }
 
-.card h2, h3 {
+.card h2,
+h3 {
     margin: 15px 0;
 }
 
@@ -230,7 +233,8 @@ a {
     font-size: 0.95em;
 }
 
-#about1, #about2 {
+#about1,
+#about2 {
     display: grid;
     gap: 25px;
 }
@@ -267,38 +271,40 @@ a {
     color: var(--light);
     padding: 8px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12);
 }
 
 .accordion i {
     color: var(--light);
 }
 
-.accordion.active{
+.accordion.active {
     background-color: var(--accent);
 }
 
 .panel {
     background-color: var(--white);
     color: var(--black);
-    padding: 12px;
-    display: none;
-    transition: all 0.6s ease-in-out;
-    box-shadow: 0 6px 6px rgba(0,0,0,0.12);
+    padding: 0;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-.panel > h3 {
+.panel>h3 {
     color: var(--sub-color);
 }
 
 .icon-toggle {
-    transition: transform 0.3s ease; /* 0.3초 동안 부드럽게 회전 */
+    transition: transform 0.3s ease;
+    /* 0.3초 동안 부드럽게 회전 */
     color: var(--main-light);
 }
 
 .proj_link {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: flex-start;
 }
 
@@ -359,7 +365,7 @@ a {
 /*여러분 그 호버도 모바일에서는 끄셔야 하는 거 아십니까 */
 @media (hover: hover) {
     .card:hover {
-        box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
         border: 1px solid var(--accent);
         transform: translateY(-2px);
     }

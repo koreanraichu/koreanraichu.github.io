@@ -54,21 +54,20 @@ function initTab() {
 
 initTab(); // 실행
 
-// 프로젝트 아코디언 패널
 accordion.forEach((title) => {
     title.addEventListener('click', () => {
-        // 클릭된 제목 바로 다음 요소(accordion_contents)를 타겟팅합니다.
         const content = title.nextElementSibling;
         const icon = title.querySelector('.icon-toggle');
 
         title.classList.toggle('active');
 
-        // 보이고 안 보이고를 토글합니다.
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            content.style.padding = null;
             icon.style.transform = 'rotate(0deg)';
         } else {
-            content.style.display = 'block';
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.padding = '12px';  /* 원래 값 */
             icon.style.transform = 'rotate(180deg)';
         }
     });

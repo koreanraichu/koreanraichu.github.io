@@ -191,6 +191,7 @@
                 </div>
                 <div id="tab3" class="cont">
                     <!--Projects (어떤 프로젝트를 했는지)-->
+                    <!--개인 프로젝트-->
                     <h2>Personal Projects</h2>
                     <h3>Bioinformatics & Genomics</h3>
                     <div class="accordion_panel">
@@ -246,7 +247,7 @@
                                 <a href="https://github.com/koreanraichu/Python/blob/master/Jupyter%20file/Project/EDA/99_Lung%20cancer.ipynb"
                                     , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
                                 <a href="files/Lung cancer Portfolio.pdf" , target="_blank"><i
-                                        class="fa-solid fa-file-pdf"></i>Portfolio PDF</a> <!--아직 \파일이 엄서-->
+                                        class="fa-solid fa-file-pdf"></i>Portfolio PDF</a>
                             </div>
                         </div>
                     </div>
@@ -331,7 +332,7 @@
                         </div>
                         <div class="panel" id="panel1">
                             <h3>Project summary</h3>
-                            <p>비디오 게임 판매 데이터셋을 바탕으로 플레이스테이션, 닌텐도, 엑스박스 삼국지가 어떤 양상인지 확인해보자.</p>
+                            <p>비디오 게임 판매 데이터셋을 바탕으로 플레이스테이션, 닌텐도, 엑스박스 삼국지가 어떤 양상으로 흘러왔는지 확인해보자. </p>
                             <h3>Data information</h3>
                             <p>Resource: Kaggle(Post-COVID Video Games Worldwide)</p>
                             <h3>Preprocessing</h3>
@@ -345,6 +346,52 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion_panel">
+                        <div class="accordion" id="acc1">
+                            <p><i class="fa-solid fa-caret-down icon-toggle"></i> Kaggle EDA-Google (Alphabet) Stock
+                                Prices 2016-2026</p>
+                        </div>
+                        <div class="panel" id="panel1">
+                            <h3>Project summary</h3>
+                            <p>Google 주식의 가격 정보 데이터로 ARIMA, SARIMA, ARIMAX를 진행해보자. </p>
+                            <p class="explain">주식 데이터 특성상 ARIMA 결과가 그렇게 예쁘게 나오지는 않았습니다. ARIMAX의 경우 외부 요인을 임시로 만들어서
+                                진행했는데, 나스닥 변동 관련된 데이터가 있다면 그걸로 진행해주셔도 됩니다. </p>
+                            <h3>Data information</h3>
+                            <p>Resource: Kaggle(Google (Alphabet) Stock Prices 2016-2026)</p>
+                            <h3>Preprocessing</h3>
+                            <p>1. 종가 데이터만 빼서 따로 차분</p>
+                            <p>2. ARIMAX용 외부 요인 생성 (5일간 이동평균)</p>
+                            <p>3. 생성된 모델을 바탕으로 예측 및 평가 지표 도출</p>
+                            <h3>Associated link</h3>
+                            <div class="proj_link">
+                                <a href="https://github.com/koreanraichu/Python/blob/master/Jupyter%20file/Project/EDA/99_Google%20(Alphabet)%20Stock%20Prices%202016-2026.ipynb"
+                                    , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion_panel">
+                        <div class="accordion" id="acc1">
+                            <p><i class="fa-solid fa-caret-down icon-toggle"></i> Kaggle EDA-Ramen ratings</p>
+                        </div>
+                        <div class="panel" id="panel1">
+                            <h3>Project summary</h3>
+                            <p>라면 평점 데이터를 통해 우리나라 라면의 입지와 글로벌 인기 라면을 알아보자. </p>
+                            <p class="explain">글로벌 인기도 진순보다 진매더군요...</p>
+                            <h3>Data information</h3>
+                            <p>Resource: Kaggle(Ramen ratings)</p>
+                            <h3>Preprocessing</h3>
+                            <p>1. 결측값 확인 및 처리</p>
+                            <p>2. 브랜드 이름 통일 및 숫자인데 문자인 척 하는 데이터 형변환</p>
+                            <p>3. 칼럼 내 줄바꿈 문자 제거</p>
+                            <p class="explain">정확히 말씀드리자면 줄바꿈 문자 '만' 있는 칸을 결측값으로 바꾼거지만요. </p>
+                            <h3>Associated link</h3>
+                            <div class="proj_link">
+                                <a href="https://github.com/koreanraichu/Python/blob/master/Jupyter%20file/Project/EDA/99_Ramen%20ratings.ipynb"
+                                    , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--팀 프로젝트-->
                     <h2>Team project</h2>
                     <div class="accordion_panel">
                         <div class="accordion" id="acc3">
@@ -352,14 +399,27 @@
                         </div>
                         <div class="panel" id="panel3">
                             <h3>Project summary</h3>
-                            <p>현재 공사중입니다. </p>
+                            <p>Kaggle의 포르투갈 은행 텔레마케팅 데이터셋을 통해 주요 고객층(20~40대)의 가입 전환률을 분석하고, 가입 전환률을 높일 방안을 도출해보자. </p>
+                            <p class="explain">Why? 이들이 은행측의 주요 타겟인 반면 가입 전환율이 제일 낮았음을 EDA를 통해 확인하였음. </p>
                             <h3>Role</h3>
-                            <p>현재 공사중입니다. </p>
+                            <p>1. Data preprocessing</p>
+                            <p>2. static analysis</p>
                             <h3>Process</h3>
-                            <p>현재 공사중입니다. </p>
+                            <h4>Data preprocessing</h4>
+                            <p>1. 이상치 확인 (별도 처리 없음)</p>
+                            <p>2. 특정 조건에 따른 범주화 컬럼 생성</p>
+                            <p class="explain">대출유무, 연령대 등</p>
+                            <h4>Static analysis</h4>
+                            <p>1. Chi-square</p>
+                            <p>2. 맨-휘트니 U 검정</p>
+                            <p>3. 2-way ANOVA+Tukey HSD</p>
+                            <p class="explain">ANOVA에서 귀무가설을 기각하여 후속분석인 Tukey HSD를 진행함</p>
+                            <p>4. FAMD</p>
+                            <p class="explain">데이터가 수치형, 범주형 혼합형이라 FAMD를 사용함. FAMD는 차원 두 개로 진행하였음.</p>
                             <h3>Associated link</h3>
                             <div class="proj_link">
-                                <a href="#" , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
+                                <a href="https://github.com/koreanraichu/Python/tree/master/Jupyter%20file/Project/Team%20project/Mid"
+                                    , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
                                 <a href="files/미드프로젝트_7조_최종.pdf" , target="_blank"><i
                                         class="fa-solid fa-file-pdf"></i>Portfolio PDF</a>
                                 <!--아직 공사중입니다-->
@@ -372,14 +432,29 @@
                         </div>
                         <div class="panel" id="panel3">
                             <h3>Project summary</h3>
-                            <p>현재 공사중입니다. </p>
+                            <p>제조업에서 휴머노이드를 도입하는 것에 대한 당위성은?</p>
                             <h3>Role</h3>
-                            <p>현재 공사중입니다. </p>
+                            <p>1. 데이터 수집(KOSIS)</p>
+                            <p>2. 전처리</p>
+                            <p>3. MTM 코드</p>
+                            <p class="explain">세부사항은 데이터에 따라 상이하지만 헤더나 칼럼 하나씩 날리고 정규식 처리+melt로 재구성했음</p>
                             <h3>Process</h3>
-                            <p>현재 공사중입니다. </p>
+                            <h4>Preprocessing</h4>
+                            <p>1. 불필요한 헤더 및 칼럼 삭제</p>
+                            <p class="explain">KOSIS 통계는 다운로드시 UTF-8로 받을 수 있어서 열 때는 그냥 열었음</p>
+                            <p>2. 정규표현식을 이용해 칼럼+인스턴스 내용 변경</p>
+                            <p class="explain">일부 데이터프레임의 돈 단위를 만원으로 통일</p>
+                            <p>3. melt를 통해 wide format->long format으로 변환</p>
+                            <p>4. csv파일로 저장</p>
+                            <h4>MTM</h4>
+                            <p>1. 특정 동작에 대한 MTM을 도출</p>
+                            <p class="explain">해당 동작에 대한 MTM 도출 자체는 Claude와 Gemini의 도움을 받았음</p>
+                            <p>2. 해당 코드 함수화 및 연속적인 데이터로 도출</p>
+                            <p class="explain">무게는 최대 25kg까지(혼자서 들 수있는 최댓값은 22kg)로 상정함</p>
                             <h3>Associated link</h3>
                             <div class="proj_link">
-                                <a href="#" , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
+                                <a href="http://github.com/koreanraichu/Python/tree/master/Jupyter%20file/Project/Team%20project/Final"
+                                    , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
                                 <a href="files/파이널_프로젝트_8팀.pdf" , target="_blank"><i
                                         class="fa-solid fa-file-pdf"></i>Portfolio PDF</a>
                                 <!--아직 공사중입니다-->
