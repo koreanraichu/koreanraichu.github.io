@@ -172,7 +172,7 @@ a {
 }
 
 .line {
-    height: 3px;
+    height: 1px;
     background-color: var(--main-dark);
 }
 
@@ -267,9 +267,10 @@ h3 {
 
 /*아코디언 패널*/
 .accordion {
+    height: 45px;
     background-color: var(--main-color);
     color: var(--light);
-    padding: 8px;
+    padding: 6px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.12);
 }
