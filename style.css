@@ -21,6 +21,11 @@
     --gray2: #8a8a8a;
 }
 
+::selection {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
 html,
 body {
     font-family: 'NanumSquareRound';
