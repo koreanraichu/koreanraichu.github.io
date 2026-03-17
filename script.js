@@ -66,7 +66,7 @@ accordion.forEach((title) => {
             content.style.padding = null;
             icon.style.transform = 'rotate(0deg)';
         } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.maxHeight = content.scrollHeight + 10 + 'px';
             content.style.padding = '12px';  /* 원래 값 */
             icon.style.transform = 'rotate(180deg)';
         }

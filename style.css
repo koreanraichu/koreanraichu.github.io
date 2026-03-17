@@ -109,8 +109,6 @@ img {
     margin: 15px 0;
 }
 
-
-
 .tab {
     width: 100%;
     height: auto;
@@ -339,6 +337,10 @@ h3 {
         width: 95%;
     }
 
+    .main {
+        padding: 0;
+    }
+
     /* 1. 2단 배치를 세로로 전환 */
     #tab1 {
         grid-template-columns: 1fr;
@@ -370,17 +372,46 @@ h3 {
         /* 모바일에선 왼쪽 정렬 */
     }
 
+    .link i {
+        font-size: 1.5em;
+    }
+
     #tab2 {
         grid-template-columns: 1fr;
     }
 
     .accordion {
-        height: 48px;
-        font-size: 0.9em;
+        height: 60px;
+        font-size: 0.85em;
+        line-height: 1.1em;
+        padding: 3px;
     }
 
     .panel {
+        font-size: 0.85em;
+    }
+
+    img {
+        width: 92%;
+    }
+
+    .proj_link a {
         font-size: 0.9em;
+    }
+
+    i {
+        font-size: 1.3em;
+    }
+
+    #tab1,
+    #about1,
+    #about2 {
+        gap: 15px;
+    }
+
+    #skill_card {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }
 
