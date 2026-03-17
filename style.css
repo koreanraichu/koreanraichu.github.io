@@ -5,14 +5,14 @@
     font-display: swap;
 }
 
-/*컬러테이블: Viridian파란색*/
+/*컬러테이블: Viridian+세피아*/
 :root {
     --main-color: #40826d;
-    --sub-color: #44617F;
+    --sub-color: #704214;
     --main-dark: #10503B;
-    --sub-dark: #14314F;
+    --sub-dark: #281400;
     --main-light: #97BFB2;
-    --sub-light: #98A9BC;
+    --sub-light: #BB8856;
     --accent: #C9A84C;
     --white: #F6f6f6;
     --light: #f1f1f1;
@@ -20,6 +20,7 @@
     --gray: #c7c7c7;
     --gray2: #8a8a8a;
 }
+
 
 ::selection {
     background-color: var(--main-color);
@@ -29,7 +30,7 @@
 html,
 body {
     font-family: 'NanumSquareRound';
-    font-size: 13pt;
+    font-size: 12.5pt;
     letter-spacing: -0.01em;
     scrollbar-width: none;
     /* 착한 사람만 보이는 스크롤바 아닙니다. */
@@ -87,6 +88,11 @@ li::before {
     font-weight: 900;
     color: var(--main-color);
     margin: 0 10px;
+}
+
+img {
+    width: 50%;
+    margin: 10px;
 }
 
 .wrapper {
@@ -242,6 +248,7 @@ h3 {
 #about2 {
     display: grid;
     gap: 25px;
+    align-content: start;
 }
 
 #about1>p>i {
@@ -365,6 +372,15 @@ h3 {
 
     #tab2 {
         grid-template-columns: 1fr;
+    }
+
+    .accordion {
+        height: 48px;
+        font-size: 0.9em;
+    }
+
+    .panel {
+        font-size: 0.9em;
     }
 }
 
