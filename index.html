@@ -202,15 +202,18 @@
                             <h3>Project summary</h3>
                             <p>MSA와 Shannon entropy를 기반으로 Hantavirus와 Influenza H3N2의 유전자 변이 패턴을 분석하고, 거리행렬 기반
                                 k-medoids를 이용해 유사한 서열들을 군집화</p>
+                            <h4>Our purpose</h4>
+                            <p>바이러스의 유전적 변이가 무작위로 발생하는지, 아니면 특정 영역에 집중되는지 확인하고, 유전적 거리와 서열 유사성 간의 관계를 규명하여 바이러스의 진화적 패턴과 군집 구조를 파악하는 것 </p>
                             <h3>Image</h3>
                             <img class="graph" src="images/H3N2_kmedoid.png">
                             <p class="explain">인플루엔자 H3N2 k-medoid 군집분석 결과</p>
                             <h3>Process & Statics</h3>
                             <p>1. NCBI Entrez 모듈을 이용해 바이러스의 게놈 데이터 입수</p>
-                            <p>2. MUSCLE MSA를 진행</p>
-                            <p>3. MSA 데이터를 바탕으로 Shanon entropy를 도출하여 변이 핫스팟 탐색, Mann-Whitney U test 진행</p>
-                            <p>4. Phylogenic tree 생성 후 거리행렬 기반 k-medoid, Spearman correlation 분석</p>
-                            <p class="explain">인플루엔자는 H3N2 아종 고정으로 Mann–Whitney U 검정 대신 Spearman 상관분석을 적용함</p>
+                            <p class="explain">retmax=300, Hantavirus의 경우 segment S만 필터링해서 분석 진행</p>
+                            <p>2. MUSCLE MSA</p>
+                            <p>3. MSA 데이터를 바탕으로 Shannon entropy를 도출하여 변이 핫스팟 탐색, Mann-Whitney U test 진행</p>
+                            <p>4. Phylogenetic tree 생성 후 거리행렬 기반 k-medoid(k=5) 및 Mann–Whitney U test, Spearman correlation(Influenza) 분석</p>
+                            <p class="explain">인플루엔자는 H3N2 아종 고정으로 Mann–Whitney U test 대신 Spearman 상관분석을 적용함</p>
                             <h3>Associated link</h3>
                             <div class="proj_link">
                                 <a href="https://github.com/koreanraichu/Python/blob/master/Jupyter%20file/Project/MSA/Hantavirus.ipynb"
@@ -218,7 +221,7 @@
                                 <a href="https://github.com/koreanraichu/Python/blob/master/Jupyter%20file/Project/MSA/Influenza%20H3N2.ipynb"
                                     , target="_blank"><i class="fa-brands fa-square-github"></i>Influenza H3N2</a>
                                 <a href="files/MSA Portfolio.pdf" , target="_blank"><i
-                                        class="fa-solid fa-file-pdf"></i>Portfolio PDF</a> <!--아직 \파일이 엄서-->
+                                        class="fa-solid fa-file-pdf"></i>Portfolio PDF</a> 
                             </div>
                         </div>
                     </div>
@@ -231,14 +234,18 @@
                         <div class="panel" id="panel2">
                             <h3>Project summary</h3>
                             <p>폐암의 병리학적 특성에 따른 생존 곡선 및 평균 생존 기간을 비교 및 시각화</p>
+                            <h4>Our purpose</h4>
+                            <p>암종별(SCLC vs NSCLC) 및 세부 병리학적 조직학(Histology) 분류에 따라 생존 곡선과 평균 생존 시간의 차이가 실제 통계적으로 
+유의미한지 분석하는 것</p>
                             <h3>Images</h3>
                             <img class="graph" src="images/Boxplot(histology).png">
                             <p class="explain">폐암의 조직학적 유형에 따른 평균 생존기간 비교 (boxplot)</p>
                             <h3>Process & Statics</h3>
                             <p>1. GEOparse를 통해 GEO에서 폐암 데이터 입수 (Dataset No: GSE30219)</p>
-                            <p>2. 필요한 정보만 추출한 다음 NSCLC, SCLC의 생존 곡선 및 평균 생존 기간 비교를 위해
+                            <p>2. 필요한 칼럼만 추출한 다음 NSCLC, SCLC의 생존 곡선 및 평균 생존 기간 비교를 위해
                                 Mann-Whitney U-test 및 Kruskal-Wallis test, Dunn's test를 진행</p>
-                            <p>3. 암종별 생존 곡선 및 평균 생존 기간 비교</p>
+                            <p>3. 암종/조직학적 분류별 생존 곡선 및 평균 생존 기간 비교</p>
+                            <p class="explain">암종별 분류에서는 SCLC(소세포성 폐암), 조직학적 분류에서는 SCC(소세포암)와 LCNE(대세포 신경내분비암)의 중앙값이 15~20년으로 가장 낮았음을 확인</p>
                             <h3>Associated link</h3>
                             <div class="proj_link">
                                 <a href="https://github.com/koreanraichu/Python/blob/master/Jupyter%20file/Project/EDA/99_Lung%20cancer.ipynb"
@@ -255,16 +262,19 @@
                         </div>
                         <div class="panel" id="panel3">
                             <h3>Project summary</h3>
-                            <p>clinVar의 유전자 변이 데이터를 분석하고, Tableau를 이용해 각 염색체별 현황을 볼 수 있는 인터렉티브 대시보드 생성
+                            <p>clinVar의 유전자 변이 데이터를 분석하고, Tableau를 이용해 각 염색체별 현황 및 개별 유전자별 현황을 볼 수 있는 인터렉티브 대시보드 생성
                             </p>
+                            <h4>Our purpose</h4>
+                            <p>clinVar VCF파일을 INFO 칼럼을 파싱해 CSV파일로 저장한 다음 Tableau 대시보드를 생성하고, Polars와 Plotly로 시각화는 것</p>
                             <h3>Images</h3>
                             <img class="graph" src="images/전체 스토리.png">
                             <p class="explain">Tableau Dashboard (각 염색체별로 필터가 걸려 있음)</p>
                             <h3>Process</h3>
                             <p>1. clinVar에서 vcf파일 입수</p>
-                            <p class="explain">2026.2.8일에 생성, GRCh37로 진행</p>
-                            <p>2. VCF파일의 데이터프레임화 및 csv파일 저장</p>
-                            <p>3. pandas를 이용한 EDA 분석</p>
+                            <p class="explain">2026.4.4일에 생성, GRCh37</p>
+                            <p>2. VCF파일의 INFO칼럼 파싱 및 데이터프레임화</p>
+                            <p class="explain">Tableau 대시보드를 만들기 위해 csv파일을 저장</p>
+                            <p>3. Polars를 이용한 EDA 분석 및 Plotly를 이용한 시각화</p>
                             <p>4. Tableau를 이용한 대시보드 및 스토리보드 제작</p>
                             <h3>Associated link</h3>
                             <div class="proj_link">
@@ -274,18 +284,17 @@
                                     target="_blank"><i class="fa-solid fa-chart-bar"></i>Tableau</a>
                                 <a href="files/Clinvar EDA.pdf" , target="_blank"><i
                                         class="fa-solid fa-file-pdf"></i>Portfolio PDF</a>
-                                <!--아직 \파일이 엄서-->
                             </div>
                         </div>
                     </div>
                     <!--팀 프로젝트-->
                     <h2>Team project</h2>
                     <div class="accordion_panel">
-                        <div class="accordion" id="acc3">
+                        <div class="accordion" id="acc4">
                             <p><i class="fa-solid fa-caret-down icon-toggle"></i> Marketing Efficiency Engine:
                                 Behavioral Segmentation and Strategy Optimization for Portugal Bank Telemarketing</p>
                         </div>
-                        <div class="panel" id="panel3">
+                        <div class="panel" id="panel4">
                             <h3>Project summary</h3>
                             <p>고객의 예금 상품 가입 전환률을 분석하고, 가입 전환률을 높일 방안을 고객 차원과 마케팅 차원에서 도출</p>
                             <p class="explain">Why? 이들이 은행측의 주요 타겟인 반면 가입 전환율이 제일 낮았음을 EDA를 통해 확인하였음. </p>
@@ -310,11 +319,11 @@
                         </div>
                     </div>
                     <div class="accordion_panel">
-                        <div class="accordion" id="acc3">
+                        <div class="accordion" id="acc5">
                             <p><i class="fa-solid fa-caret-down icon-toggle"></i> Humanoid Strategy Insight: Economic
                                 Viability and Productivity Analysis in Manufacturing</p>
                         </div>
-                        <div class="panel" id="panel3">
+                        <div class="panel" id="panel5">
                             <h3>Project summary</h3>
                             <p>사람의 노동력 데이터를 바탕으로 휴머노이드의 노동력을 추정하고, 제조업에서 휴머노이드를 도입했을 때의 이점에 대해 분석</p>
                             <h3>Role</h3>
@@ -333,6 +342,31 @@
                                 <a href="http://github.com/koreanraichu/Python/tree/master/Jupyter%20file/Project/Team%20project/Final"
                                     , target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
                                 <a href="files/파이널_프로젝트_8팀.pdf" , target="_blank"><i
+                                        class="fa-solid fa-file-pdf"></i>Portfolio PDF</a>
+                                <!--아직 공사중입니다-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion_panel">
+                        <div class="accordion" id="acc6">
+                            <p><i class="fa-solid fa-caret-down icon-toggle"></i> Event-based Branding Insight: Integrated Funnel Structure and Productivity Analysis of the Rextreme Marketing Campaign</p>
+                        </div>
+                        <div class="panel" id="panel6">
+                            <p class="notice">해당 프로젝트의 경우 프로젝트를 의뢰한 곳이 사업체인 관게로 따로 GitHub에 코드를 올리지 않았습니다.</p>
+                            <h3>Project summary</h3>
+                            <p>SNS·GA4·구매 데이터 통합 분석을 통해 렉스트림 이벤트의 단계별 퍼널 성과와 병목 구간을 진단하고, 일회성 관심을 넘어 브랜드 이미지 전환을 위한 지속 가능(Continuity)한 마케팅 최적화 전략을 도출</p>
+                            <h3>Role</h3>
+                            <p>1. GA4 기반 사용자 행동 데이터 분석 및 전환 퍼널 최적화 지표 수립</p>
+                            <p>2. 유입 채널별 기여도 분석을 통한 고객 접점(Touchpoint)별 마케팅 효율 검증</p>
+                            <h3>Process</h3>
+                            <h4>GA4 analysis & Funnel</h4>
+                            <p>1. GA4에서 발생한 일별 이벤트 및 사용자 데이터를 수집하고, 분석 목적에 맞게 전처리하여 유입-탐색-구매로 이어지는 데이터셋 구성</p>
+                            <p>2. '방문 → 탐색 → 도입 의사 결정(상세 확인) → 최종 전환'으로 이어지는 사용자 경험 단계를 정의하고, 각 단계별 잔존율(Retention Rate)과 이탈 규모를 수치화</p>
+                            <p>3. 전체 전환율을 기준으로 최대 규모 이탈 구간(방문→탐색)과 핵심 병목 구간(결정→구매)을 파악하여 프로세스 개선 시사점 도출</p>
+                            <p>4. 리퍼럴(Referral), 검색 등 유입 경로/채널별 사용자 수와 실제 전환 사용자 수를 비교하여 전환 효율이 가장 높은 핵심 채널 식별</p>
+                            <h3>Associated link</h3>
+                            <div class="proj_link">
+                                <a href="files/렉스트림 마케팅효과 데이터 분석.pdf" , target="_blank"><i
                                         class="fa-solid fa-file-pdf"></i>Portfolio PDF</a>
                                 <!--아직 공사중입니다-->
                             </div>
